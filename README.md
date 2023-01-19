@@ -60,7 +60,7 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Math magecians] <a name="about-project"></a>
+# 📖 [Bookstore] <a name="about-project"></a>
 
 <!-- > Describe your project in 1 or 2 sentences. -->
 
@@ -101,10 +101,9 @@ Bookstore is a sample web application where we can performs add delate and edit 
 
 <!-- ### Key Features <a name="key-features"></a> -->
 
-> Describe between 1-3 key features of the application.
-
-- **[Make math calculation]**
-- **[Modern design]**
+- **[Add books]**
+- **[Remove Books]**
+- **[Edit Books]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -144,7 +143,7 @@ Clone this repository to your desired folder:
 
 ```sh
   git clone https://github.com/codehass/bookstore.git
-  cd -math-magicians
+  cd bookstore
 ```
 
 ### Install
@@ -152,7 +151,7 @@ Clone this repository to your desired folder:
 Install this project with:
 
 ```sh
-  cd -math-magicians
+  cd bookstore
   npm install
 ```
 
@@ -210,7 +209,7 @@ Example:
 
 > Describe 1 - 3 features you will add to the project.
 
-- [ ] **[Math Quotes]**
+- [ ] **[Books progress]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
