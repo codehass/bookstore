@@ -1,7 +1,7 @@
 import { Link, Route, Routes } from 'react-router-dom';
+import { FaUserCircle } from 'react-icons/fa';
 import Booklists from './components/booklists';
 import Categories from './components/categories';
-import { FaUserCircle } from 'react-icons/fa';
 
 function App() {
   return (
@@ -12,7 +12,8 @@ function App() {
           <ul>
             <li>
               {' '}
-              <Link to="/">BOOKS</Link>{' '}
+              <Link to="/">BOOKS</Link>
+              {' '}
             </li>
             <li>
               <Link to="/categories">CATEGORIES</Link>
