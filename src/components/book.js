@@ -1,23 +1,22 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
 
-const Book = ({ category, title, author }) => (
+const Book = ({ title, author }) => (
   <>
     <div className="book">
       <div className="book-infos">
         <div>
-          <div>{category}</div>
           <div>{title}</div>
           <div>{author}</div>
         </div>
         <div>
-          <button typle="button" className="btn">
+          <button type="button" className="btn">
             Comment
           </button>
-          <button typle="button" className="btn">
+          <button type="button" className="btn">
             Remove
           </button>
-          <button typle="button" className="btn">
+          <button type="button" className="btn">
             Edit
           </button>
         </div>
@@ -30,7 +29,6 @@ const Book = ({ category, title, author }) => (
 );
 
 Book.propTypes = {
-  category: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
 };
