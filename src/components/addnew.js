@@ -1,22 +1,45 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { v4 } from 'uuid';
+import { useDispatch } from 'react-redux';
+import { addBook } from '../redux/books/books';
 
 const Addnew = () => {
-  const options = [
-    { id: 1, label: 'Action', value: 'action' },
-    { id: 2, label: 'Science Fiction', value: 'science' },
-    { id: 3, label: 'Economy', value: 'economy' },
-  ];
+  const dispatch = useDispatch();
+  const [state, setState] = useState({
+    id: '',
+    title: '',
+    author: '',
+  });
+
+  function handleChange(evt) {
+    // const value = evt.target.value;
+    setState({ ...state, id: v4(), [evt.target.name]: evt.target.value });
+  }
+
+  const addToStore = (e) => {
+    e.preventDefault();
+
+    dispatch(addBook(state));
+    setState({ id: '', title: '', author: '' });
+  };
 
   return (
-    <form>
-      <input type="text" placeholder="Book title" />
-      <select>
-        {options.map((option) => (
-          <option key={option.id} value={option.value}>
-            {option.label}
-          </option>
-        ))}
-      </select>
+    <form onSubmit={addToStore}>
+      <input
+        type="text"
+        placeholder="Book title"
+        name="title"
+        value={state.title}
+        onChange={handleChange}
+      />
+      <input
+        type="text"
+        placeholder="Author"
+        name="author"
+        value={state.author}
+        onChange={handleChange}
+      />
+
       <input type="submit" placeholder="ADD BOOK" />
     </form>
   );

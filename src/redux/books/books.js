@@ -1,8 +1,26 @@
+import { v4 } from 'uuid';
+
 // Actions
 const ADD = 'bookstore/books/ADD';
 const REMOVE = 'bookstore/books/REMOVE';
 
-const initialState = [];
+const initialState = [
+  {
+    id: v4(),
+    title: 'The Hunger Games',
+    author: 'Suzanne Collins',
+  },
+  {
+    id: v4(),
+    title: 'Dune',
+    author: 'Frank Herbert',
+  },
+  {
+    id: v4(),
+    title: 'Capital in the Twenty-First Century',
+    author: 'Suzanne Collins',
+  },
+];
 
 // Reducer
 export default function booksReducer(state = initialState, action) {
@@ -10,7 +28,7 @@ export default function booksReducer(state = initialState, action) {
     case ADD:
       return [...state, action.book];
     case REMOVE:
-      return state.filter((_, book) => book !== action.book);
+      return state.filter((book) => book.id !== action.id);
     default:
       return state;
   }
@@ -24,9 +42,9 @@ export function addBook(book) {
   };
 }
 
-export function removeBook(book) {
+export function removeBook(id) {
   return {
     type: REMOVE,
-    book,
+    id,
   };
 }
