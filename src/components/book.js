@@ -19,7 +19,7 @@ const Book = ({
           <div>
             <div className="category">{category}</div>
             <div className="title">{title}</div>
-            <div>{author}</div>
+            <div className="author">{author}</div>
           </div>
           <div className="btns">
             <button type="button" className="action-btn">

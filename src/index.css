@@ -20,14 +20,13 @@ a {
   justify-content: space-between;
   align-items: center;
   width: 80%;
-  margin: 20px auto auto auto;
-  padding: 15px;
+  margin: 0 auto auto auto;
+  padding: 10px 4%;
   background-color: #fff;
 }
 
 .nav-list {
   display: flex;
-  gap: 50px;
   align-items: center;
 }
 
@@ -41,6 +40,7 @@ a {
   color: #0290ff;
   font-size: 36px;
   font-weight: bold;
+  margin: 15px;
 }
 
 /* book styling */
@@ -50,15 +50,15 @@ a {
   margin: auto;
   display: flex;
   flex-direction: column;
-  gap: 50px;
-  padding: 18px;
+  gap: 13px;
+  padding: 4%;
   background: rgb(247, 242, 242);
 }
 
 .book {
   width: 90%;
   margin: auto;
-  padding: 30px;
+  padding: 15px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -69,7 +69,7 @@ a {
 .add-book {
   width: 80%;
   margin: auto;
-  padding: 20px;
+  padding: 20px 4% 72px 4%;
   background: #fff;
   margin-bottom: 40px;
 }
@@ -102,11 +102,14 @@ form {
 }
 
 .action-btn {
-  padding: 0 8px;
+  font-family: 'Roboto Slab', serif;
+  background-color: transparent;
   border: none;
-  background-color: #fff;
-  font-size: 18px;
   color: #4386bf;
+  font-size: 0.875rem;
+  font-weight: 300;
+  align-items: center;
+  cursor: pointer;
 }
 
 .remove-btn {
@@ -116,11 +119,12 @@ form {
 
 .prog-btn {
   background-color: #0290ff;
+  font-family: 'Roboto Slab', serif;
+  letter-spacing: 0.5px;
   color: #fff;
-  font-size: 16px;
   border: none;
-  height: 40px;
-  width: 200px;
+  height: 35px;
+  width: 180px;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -143,9 +147,16 @@ form {
 }
 
 .title {
-  margin: 10px 0;
+  font-family: 'Roboto Slab', serif;
+  margin-top: 0.188rem;
   font-size: 1.375rem;
   letter-spacing: -0.2px;
+}
+
+.author {
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: #4386bf;
 }
 
 .category {
@@ -157,8 +168,8 @@ form {
 }
 
 .user {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   color: #0290ff;
 }
 
@@ -199,4 +210,35 @@ form {
   font-size: 0.813rem;
   color: #121212;
   letter-spacing: 1.9px;
+}
+
+.progress-stat {
+  font-family: 'Montserrat', sans-serif;
+  color: #121212;
+  font-size: 2rem;
+}
+
+.completed {
+  font-size: 0.875rem;
+  opacity: 0.5;
+  font-family: 'Montserrat', sans-serif;
+  color: #121212;
+}
+
+.form-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.18px;
+  color: #888;
+}
+
+.categ {
+  font-family: 'Roboto Slab', serif;
+  font-size: 2em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  font-weight: bold;
 }

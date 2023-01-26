@@ -21,31 +21,37 @@ const Addnew = () => {
     e.preventDefault();
     dispatch(addBook(state));
     setState({
-      item_id: '', title: '', author: '', category: '',
+      item_id: '',
+      title: '',
+      author: '',
+      category: '',
     });
   };
 
   return (
-    <form onSubmit={addToStore}>
-      <input
-        type="text"
-        placeholder="Book title"
-        name="title"
-        value={state.title}
-        onChange={handleChange}
-        className="input-text"
-      />
-      <input
-        type="text"
-        placeholder="Author"
-        name="author"
-        value={state.author}
-        onChange={handleChange}
-        className="input-text"
-      />
+    <>
+      <h2 className="form-title">ADD NEW BOOK</h2>
+      <form onSubmit={addToStore}>
+        <input
+          type="text"
+          placeholder="Book title"
+          name="title"
+          value={state.title}
+          onChange={handleChange}
+          className="input-text"
+        />
+        <input
+          type="text"
+          placeholder="Author"
+          name="author"
+          value={state.author}
+          onChange={handleChange}
+          className="input-text"
+        />
 
-      <input type="submit" placeholder="ADD BOOK" className="add-btn" />
-    </form>
+        <input type="submit" placeholder="ADD BOOK" className="add-btn" />
+      </form>
+    </>
   );
 };
 
