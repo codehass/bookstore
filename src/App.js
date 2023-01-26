@@ -12,17 +12,21 @@ function App() {
           <ul>
             <li>
               {' '}
-              <Link to="/">BOOKS</Link>
+              <Link className="nav-link" to="/">
+                BOOKS
+              </Link>
               {' '}
             </li>
             <li>
-              <Link to="/categories">CATEGORIES</Link>
+              <Link className="nav-link" to="/categories">
+                CATEGORIES
+              </Link>
             </li>
           </ul>
         </div>
 
         <div>
-          <FaUserCircle />
+          <FaUserCircle className="user" />
         </div>
       </nav>
       <Routes>

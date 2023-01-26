@@ -20,7 +20,9 @@ const Addnew = () => {
   const addToStore = (e) => {
     e.preventDefault();
     dispatch(addBook(state));
-    setState({ item_id: '', title: '', author: '' });
+    setState({
+      item_id: '', title: '', author: '', category: '',
+    });
   };
 
   return (
@@ -31,6 +33,7 @@ const Addnew = () => {
         name="title"
         value={state.title}
         onChange={handleChange}
+        className="input-text"
       />
       <input
         type="text"
@@ -38,9 +41,10 @@ const Addnew = () => {
         name="author"
         value={state.author}
         onChange={handleChange}
+        className="input-text"
       />
 
-      <input type="submit" placeholder="ADD BOOK" />
+      <input type="submit" placeholder="ADD BOOK" className="add-btn" />
     </form>
   );
 };
