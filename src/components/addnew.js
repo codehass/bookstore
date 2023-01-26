@@ -6,21 +6,21 @@ import { addBook } from '../redux/books/books';
 const Addnew = () => {
   const dispatch = useDispatch();
   const [state, setState] = useState({
-    id: '',
+    item_id: '',
     title: '',
     author: '',
+    category: 'Action',
   });
 
   function handleChange(evt) {
     // const value = evt.target.value;
-    setState({ ...state, id: v4(), [evt.target.name]: evt.target.value });
+    setState({ ...state, item_id: v4(), [evt.target.name]: evt.target.value });
   }
 
   const addToStore = (e) => {
     e.preventDefault();
-
     dispatch(addBook(state));
-    setState({ id: '', title: '', author: '' });
+    setState({ item_id: '', title: '', author: '' });
   };
 
   return (
